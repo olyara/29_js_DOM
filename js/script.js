@@ -42,53 +42,21 @@ for (let element of playList) {
 // document.body.appendChild(list);
 
 // 2. Создать HTML-страницу с кнопкой "Открыть" и модальным окном. На модальном окне должен быть текст и кнопка "Закрыть". Изначально модальное окно не отображается. При клике на кнопку "Открыть" появляется модальное окно, на кнопку "Закрыть" – исчезает.
-let openButton = document.createElement("button");
-openButton.innerText = "Open";
-openButton.id = "open";
-// document.body.appendChild(openButton);
 
-let modal = document.createElement("div");
-modal.id = "modal";
-let text = document.createElement("p");
-text.innerText =
-  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, id.";
-let closeButton = document.createElement("button");
-closeButton.id = "close";
-closeButton.innerText = "Close";
-modal.appendChild(text);
-modal.appendChild(closeButton);
-// document.body.appendChild(modal);
+document.getElementById("open").onclick = function () {
+  document.getElementById("modal").style.display = "block";
+};
 
-// open").onclick = function () {
-//   modal").style.display = "block";
-// };
-
-// close").onclick = function () {
-//   modal").style.display = "none";
-// };
+document.getElementById("close").onclick = function () {
+  document.getElementById("modal").style.display = "none";
+};
 
 // 3. Создать HTML-страницу со светофором и кнопкой, которая переключает светофор на следующий цвет.
-let mainer = document.createElement("div");
-mainer.id = "mainer";
-
-let red = document.createElement("div");
-red.id = "red";
-mainer.appendChild(red);
-
-let yellow = document.createElement("div");
-yellow.id = "yellow";
-mainer.appendChild(yellow);
-
-let green = document.createElement("div");
-green.id = "green";
-mainer.appendChild(green);
-
-// document.body.appendChild(mainer);
-
-let switcher = document.createElement("button");
-switcher.id = "switcher";
-switcher.innerText = "Change traffic light";
-// document.body.appendChild(switcher);
+let mainer = document.getElementById("mainer");
+let red = document.getElementById("red");
+let yellow = document.getElementById("yellow");
+let green = document.getElementById("green");
+let switcher = document.getElementById("switcher");
 
 switcher.onclick = function () {
   if (
